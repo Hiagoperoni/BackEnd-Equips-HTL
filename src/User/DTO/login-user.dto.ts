@@ -1,9 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { IsString, IsEmail, MinLength } from 'class-validator';
 
-export class CreateUserDTO {
-  @IsString()
-  name: string;
+export class LoginUserDTO {
 
   @IsEmail()
   email: string;
@@ -11,4 +9,5 @@ export class CreateUserDTO {
   @IsString()
   @MinLength(6)
   password: string;
+
 }
